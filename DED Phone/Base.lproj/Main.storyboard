@@ -229,7 +229,7 @@
                         <viewLayoutGuide key="safeArea" id="KhQ-Yk-Lec"/>
                     </view>
                     <connections>
-                        <segue destination="EN4-hS-AEm" kind="show" identifier="callSegue" id="c6J-5s-5Fz"/>
+                        <segue destination="EN4-hS-AEm" kind="show" identifier="callSegue" animates="NO" id="c6J-5s-5Fz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAs-cY-Z2S" userLabel="First Responder" sceneMemberID="firstResponder"/>

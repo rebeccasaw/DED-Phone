@@ -73,7 +73,10 @@ class ViewController: UIViewController {
        // print("phone "+number.text)
         if(number.text=="*"){
              performSegue(withIdentifier: "timerSegue", sender: self)
-        }else if(!number.text.isEmpty){
+        }else if(number.text == "745683662"){
+         performSegue(withIdentifier: "changeWaitSegue", sender: self)
+        }
+        else if(!number.text.isEmpty){
         performSegue(withIdentifier: "callingSeque", sender: self)
         }
         
@@ -83,7 +86,7 @@ class ViewController: UIViewController {
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if(number.text != "*"){
+    if(segue.identifier == "callingSeque"){
         let secondController = segue.destination as! SecondViewController
         secondController.incomingNumber = number.text
       }

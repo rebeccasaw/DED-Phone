@@ -167,6 +167,7 @@
                         <outlet property="number" destination="a3c-bT-HCj" id="a3z-I4-3JD"/>
                         <segue destination="93U-07-MTz" kind="show" identifier="callingSeque" id="oMw-T1-zqP"/>
                         <segue destination="8gz-WN-nZP" kind="show" identifier="timerSegue" id="VFe-qc-RGc"/>
+                        <segue destination="Nby-KQ-bV1" kind="show" identifier="changeWaitSegue" id="DUe-GR-4sX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -234,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="834" y="480"/>
         </scene>
-        <!--View Controller-->
+        <!--Incoming Call View Controller-->
         <scene sceneID="wdG-ao-y6Q">
             <objects>
-                <viewController id="EN4-hS-AEm" sceneMemberID="viewController">
+                <viewController id="EN4-hS-AEm" customClass="IncomingCallViewController" customModule="DED_Phone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Clf-46-7Vd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,6 +255,16 @@
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="31"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAc-qJ-KCp">
+                                <rect key="frame" x="212" y="424" width="87" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                <state key="normal" image="answerButton"/>
+                                <connections>
+                                    <action selector="answerCall:" destination="EN4-hS-AEm" eventType="touchUpInside" id="J0n-66-Lky"/>
+                                    <action selector="phone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lUm-ph-JSw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hDc-xI-eVs"/>
@@ -266,10 +277,10 @@
             </objects>
             <point key="canvasLocation" x="1575" y="480"/>
         </scene>
-        <!--View Controller-->
+        <!--Answered Call View Controller-->
         <scene sceneID="2bF-7b-173">
             <objects>
-                <viewController id="W0N-Qz-K1e" sceneMemberID="viewController">
+                <viewController id="W0N-Qz-K1e" customClass="AnsweredCallViewController" customModule="DED_Phone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eDJ-YA-5xc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,7 +298,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Answer this call" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl9-Nb-0vA">
-                                <rect key="frame" x="29" y="53" width="262" height="87.5"/>
+                                <rect key="frame" x="29" y="53" width="262" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,12 +310,64 @@
                         <viewLayoutGuide key="safeArea" id="LpU-gc-CJD"/>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="7WB-vo-TSg"/>
+                        <outlet property="statusText" destination="IQU-t8-qZt" id="mt4-Bb-x8F"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="diallingSegue" animates="NO" id="7WB-vo-TSg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qC-fS-m5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2303" y="480"/>
+            <point key="canvasLocation" x="2302.5" y="479.57746478873241"/>
+        </scene>
+        <!--Change Wait View Controller-->
+        <scene sceneID="iRZ-h7-E1O">
+            <objects>
+                <viewController id="Nby-KQ-bV1" customClass="ChangeWaitViewController" customModule="DED_Phone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vBi-eQ-j9K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA0-hg-Wua">
+                                <rect key="frame" x="108" y="240" width="103" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="enterPressed:" destination="Nby-KQ-bV1" eventType="touchUpInside" id="HeB-SG-vke"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Timer wait before Zee calls:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oih-IC-OEv">
+                                <rect key="frame" x="58" y="70" width="205" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="seconds" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uns-Uc-52o">
+                                <rect key="frame" x="116" y="195" width="86" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zod-Uk-6Sb">
+                                <rect key="frame" x="81" y="157" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1mL-t6-8yo"/>
+                    </view>
+                    <connections>
+                        <outlet property="input" destination="zod-Uk-6Sb" id="B5e-5Y-im7"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="diallingSegue" id="uwz-3b-us6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6b-nb-Yoi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="-771"/>
         </scene>
     </scenes>
     <resources>
@@ -320,6 +383,7 @@
         <image name="7" width="200" height="200"/>
         <image name="8" width="200" height="200"/>
         <image name="9" width="200" height="200"/>
+        <image name="answerButton" width="234" height="234"/>
         <image name="back" width="75" height="82"/>
         <image name="called plain" width="780" height="1340"/>
         <image name="calling plain" width="780" height="1340"/>
@@ -328,6 +392,6 @@
         <image name="ringing screen" width="915" height="1569"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7WB-vo-TSg"/>
+        <segue reference="uwz-3b-us6"/>
     </inferredMetricsTieBreakers>
 </document>

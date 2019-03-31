@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E11824E92250349D005C6367 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11824E82250349D005C6367 /* TimerViewController.swift */; };
+		E11824EB22503B5A005C6367 /* IncomingCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11824EA22503B5A005C6367 /* IncomingCallViewController.swift */; };
+		E11824ED22503C6C005C6367 /* RingRing.wav in Resources */ = {isa = PBXBuildFile; fileRef = E11824EC22503C6C005C6367 /* RingRing.wav */; };
+		E11824EF22503E26005C6367 /* AnsweredCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11824EE22503E26005C6367 /* AnsweredCallViewController.swift */; };
+		E11824F122504641005C6367 /* ChangeWaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11824F022504641005C6367 /* ChangeWaitViewController.swift */; };
 		E1BC740F224D1199007CEC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC740E224D1199007CEC48 /* AppDelegate.swift */; };
 		E1BC7411224D1199007CEC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC7410224D1199007CEC48 /* ViewController.swift */; };
 		E1BC7414224D1199007CEC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BC7412224D1199007CEC48 /* Main.storyboard */; };
@@ -39,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		E11824E82250349D005C6367 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		E11824EA22503B5A005C6367 /* IncomingCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingCallViewController.swift; sourceTree = "<group>"; };
+		E11824EC22503C6C005C6367 /* RingRing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = RingRing.wav; path = "../../../../Documents/DED Phone/RingRing.wav"; sourceTree = "<group>"; };
+		E11824EE22503E26005C6367 /* AnsweredCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweredCallViewController.swift; sourceTree = "<group>"; };
+		E11824F022504641005C6367 /* ChangeWaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeWaitViewController.swift; sourceTree = "<group>"; };
 		E1BC740B224D1199007CEC48 /* DED Phone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DED Phone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BC740E224D1199007CEC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BC7410224D1199007CEC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +119,9 @@
 				E1BC7410224D1199007CEC48 /* ViewController.swift */,
 				E1DB135E224EFE9500F6E613 /* SecondViewController.swift */,
 				E11824E82250349D005C6367 /* TimerViewController.swift */,
+				E11824EA22503B5A005C6367 /* IncomingCallViewController.swift */,
+				E11824EE22503E26005C6367 /* AnsweredCallViewController.swift */,
+				E11824F022504641005C6367 /* ChangeWaitViewController.swift */,
 				E1BC7415224D119B007CEC48 /* Assets.xcassets */,
 				E1BC7417224D119B007CEC48 /* LaunchScreen.storyboard */,
 				E1BC741A224D119B007CEC48 /* Info.plist */,
@@ -143,6 +154,7 @@
 				E1DB135B224EC43E00F6E613 /* Ringing.wav */,
 				E1DB135C224EC82400F6E613 /* Ringing2.wav */,
 				E1DB1360224F146F00F6E613 /* Fire.wav */,
+				E11824EC22503C6C005C6367 /* RingRing.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -255,6 +267,7 @@
 				E1DB1361224F146F00F6E613 /* Fire.wav in Resources */,
 				E1BC7419224D119B007CEC48 /* LaunchScreen.storyboard in Resources */,
 				E1BC7416224D119B007CEC48 /* Assets.xcassets in Resources */,
+				E11824ED22503C6C005C6367 /* RingRing.wav in Resources */,
 				E1BC7414224D1199007CEC48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,10 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11824EF22503E26005C6367 /* AnsweredCallViewController.swift in Sources */,
 				E11824E92250349D005C6367 /* TimerViewController.swift in Sources */,
 				E1DB135F224EFE9500F6E613 /* SecondViewController.swift in Sources */,
 				E1BC7411224D1199007CEC48 /* ViewController.swift in Sources */,
+				E11824EB22503B5A005C6367 /* IncomingCallViewController.swift in Sources */,
 				E1BC740F224D1199007CEC48 /* AppDelegate.swift in Sources */,
+				E11824F122504641005C6367 /* ChangeWaitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

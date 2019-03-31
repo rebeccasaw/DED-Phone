@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11824E92250349D005C6367 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11824E82250349D005C6367 /* TimerViewController.swift */; };
 		E1BC740F224D1199007CEC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC740E224D1199007CEC48 /* AppDelegate.swift */; };
 		E1BC7411224D1199007CEC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC7410224D1199007CEC48 /* ViewController.swift */; };
 		E1BC7414224D1199007CEC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BC7412224D1199007CEC48 /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		E1BC7419224D119B007CEC48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BC7417224D119B007CEC48 /* LaunchScreen.storyboard */; };
 		E1BC7424224D119B007CEC48 /* DED_PhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC7423224D119B007CEC48 /* DED_PhoneTests.swift */; };
 		E1BC742F224D119B007CEC48 /* DED_PhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC742E224D119B007CEC48 /* DED_PhoneUITests.swift */; };
+		E1DB135D224EC82400F6E613 /* Ringing2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E1DB135C224EC82400F6E613 /* Ringing2.wav */; };
+		E1DB135F224EFE9500F6E613 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB135E224EFE9500F6E613 /* SecondViewController.swift */; };
+		E1DB1361224F146F00F6E613 /* Fire.wav in Resources */ = {isa = PBXBuildFile; fileRef = E1DB1360224F146F00F6E613 /* Fire.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E11824E82250349D005C6367 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		E1BC740B224D1199007CEC48 /* DED Phone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DED Phone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BC740E224D1199007CEC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BC7410224D1199007CEC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,10 @@
 		E1BC742A224D119B007CEC48 /* DED PhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DED PhoneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BC742E224D119B007CEC48 /* DED_PhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DED_PhoneUITests.swift; sourceTree = "<group>"; };
 		E1BC7430224D119B007CEC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1DB135B224EC43E00F6E613 /* Ringing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Ringing.wav; sourceTree = "<group>"; };
+		E1DB135C224EC82400F6E613 /* Ringing2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Ringing2.wav; path = "../../../../Documents/DED Phone/Ringing2.wav"; sourceTree = "<group>"; };
+		E1DB135E224EFE9500F6E613 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E1DB1360224F146F00F6E613 /* Fire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Fire.wav; path = "../../../../Documents/DED Phone/Fire.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +107,14 @@
 			isa = PBXGroup;
 			children = (
 				E1BC740E224D1199007CEC48 /* AppDelegate.swift */,
-				E1BC7410224D1199007CEC48 /* ViewController.swift */,
 				E1BC7412224D1199007CEC48 /* Main.storyboard */,
+				E1BC7410224D1199007CEC48 /* ViewController.swift */,
+				E1DB135E224EFE9500F6E613 /* SecondViewController.swift */,
+				E11824E82250349D005C6367 /* TimerViewController.swift */,
 				E1BC7415224D119B007CEC48 /* Assets.xcassets */,
 				E1BC7417224D119B007CEC48 /* LaunchScreen.storyboard */,
 				E1BC741A224D119B007CEC48 /* Info.plist */,
+				E1DB135A224EC43700F6E613 /* Sounds */,
 			);
 			path = "DED Phone";
 			sourceTree = "<group>";
@@ -123,6 +135,16 @@
 				E1BC7430224D119B007CEC48 /* Info.plist */,
 			);
 			path = "DED PhoneUITests";
+			sourceTree = "<group>";
+		};
+		E1DB135A224EC43700F6E613 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E1DB135B224EC43E00F6E613 /* Ringing.wav */,
+				E1DB135C224EC82400F6E613 /* Ringing2.wav */,
+				E1DB1360224F146F00F6E613 /* Fire.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DB135D224EC82400F6E613 /* Ringing2.wav in Resources */,
+				E1DB1361224F146F00F6E613 /* Fire.wav in Resources */,
 				E1BC7419224D119B007CEC48 /* LaunchScreen.storyboard in Resources */,
 				E1BC7416224D119B007CEC48 /* Assets.xcassets in Resources */,
 				E1BC7414224D1199007CEC48 /* Main.storyboard in Resources */,
@@ -256,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11824E92250349D005C6367 /* TimerViewController.swift in Sources */,
+				E1DB135F224EFE9500F6E613 /* SecondViewController.swift in Sources */,
 				E1BC7411224D1199007CEC48 /* ViewController.swift in Sources */,
 				E1BC740F224D1199007CEC48 /* AppDelegate.swift in Sources */,
 			);
@@ -435,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CH229FMVFV;
 				INFOPLIST_FILE = "DED Phone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CH229FMVFV;
 				INFOPLIST_FILE = "DED Phone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

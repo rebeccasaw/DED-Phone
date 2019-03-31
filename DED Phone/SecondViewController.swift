@@ -14,7 +14,11 @@ class SecondViewController: UIViewController,AVAudioPlayerDelegate{
     var ringingPlayer=AVAudioPlayer()
     var zeePlayer=AVAudioPlayer()
    
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     var timer=Timer()
+    var endCallTimer=Timer()
+    
     var seconds = 0
     var minutes = 0
     
@@ -58,7 +62,15 @@ class SecondViewController: UIViewController,AVAudioPlayerDelegate{
         zeePlayer.play()
     
         }else{
-            performSegue(withIdentifier: "diallingSeque", sender: self)
+            timer.invalidate()
+            backgroundImage.image = UIImage(named: "call ended")
+            statusText.text = "call ended"
+            statusText.textColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
+            callingNumber.textColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
+   
+             endCallTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.returnToDialler), userInfo: nil, repeats: false)
+            
+            
         }
         
     }
@@ -72,6 +84,8 @@ class SecondViewController: UIViewController,AVAudioPlayerDelegate{
         statusText.text=String(format:"%02d",minutes)+":"+String(format:"%02d",seconds)
     }
     
-
+    @objc func returnToDialler(){
+       performSegue(withIdentifier: "diallingSeque", sender: self)
+    }
 }
 

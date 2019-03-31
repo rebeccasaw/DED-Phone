@@ -13,10 +13,18 @@ class AnsweredCallViewController: UIViewController,AVAudioPlayerDelegate {
     var zee2Player=AVAudioPlayer()
     
     var timer=Timer()
+    var endCallTimer=Timer()
     var seconds = 0
     var minutes = 0
+    
+    var callEnded = false
 
     @IBOutlet weak var statusText: UITextView!
+    
+    @IBOutlet weak var numberText: UITextView!
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +41,16 @@ class AnsweredCallViewController: UIViewController,AVAudioPlayerDelegate {
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        performSegue(withIdentifier: "diallingSegue", sender: self)
+      backgroundImage.image = UIImage(named: "call ended")
+      statusText.text = "call ended"
+      statusText.textColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
+      numberText.textColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
+      //play audio?
+        
+      callEnded = true
+      timer.invalidate()
+        
+      endCallTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.returnToDialler), userInfo: nil, repeats: false) //call after 2 seconds
         
     }
 
@@ -43,6 +60,12 @@ class AnsweredCallViewController: UIViewController,AVAudioPlayerDelegate {
             seconds=0
             minutes+=1
         }
+        if(!callEnded){
         statusText.text=String(format:"%02d",minutes)+":"+String(format:"%02d",seconds)
+        }
+    }
+    
+     @objc func returnToDialler(){
+         performSegue(withIdentifier: "diallingSegue", sender: self)
     }
 }

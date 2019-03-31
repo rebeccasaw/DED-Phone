@@ -207,6 +207,7 @@
                         <viewLayoutGuide key="safeArea" id="nqd-mN-RnQ"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="Mfa-gu-Hft" id="WJh-gI-np8"/>
                         <outlet property="callingImage" destination="Mfa-gu-Hft" id="SF0-Tf-yX1"/>
                         <outlet property="callingNumber" destination="nx5-7O-GCK" id="VO2-um-Swr"/>
                         <outlet property="statusText" destination="V4P-Ey-4Uu" id="iUG-Y0-3Lc"/>
@@ -310,6 +311,8 @@
                         <viewLayoutGuide key="safeArea" id="LpU-gc-CJD"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="kpV-xZ-yxa" id="SeK-DN-l6T"/>
+                        <outlet property="numberText" destination="cl9-Nb-0vA" id="Llo-iC-nBa"/>
                         <outlet property="statusText" destination="IQU-t8-qZt" id="mt4-Bb-x8F"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="diallingSegue" animates="NO" id="7WB-vo-TSg"/>
                     </connections>
@@ -392,6 +395,6 @@
         <image name="ringing screen" width="915" height="1569"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uwz-3b-us6"/>
+        <segue reference="U9F-3L-p0o"/>
     </inferredMetricsTieBreakers>
 </document>

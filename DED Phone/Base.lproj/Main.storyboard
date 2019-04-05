@@ -345,8 +345,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="seconds" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uns-Uc-52o">
-                                <rect key="frame" x="116" y="195" width="86" height="37"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="seconds" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uns-Uc-52o">
+                                <rect key="frame" x="116" y="195" width="86" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -370,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6b-nb-Yoi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47" y="-771"/>
+            <point key="canvasLocation" x="46.875" y="-771.12676056338034"/>
         </scene>
     </scenes>
     <resources>
@@ -395,6 +395,6 @@
         <image name="ringing screen" width="915" height="1569"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U9F-3L-p0o"/>
+        <segue reference="uwz-3b-us6"/>
     </inferredMetricsTieBreakers>
 </document>

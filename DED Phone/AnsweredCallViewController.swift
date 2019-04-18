@@ -28,7 +28,7 @@ class AnsweredCallViewController: UIViewController,AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let zee2Sound = Bundle.main.path(forResource:"Fire", ofType:"wav")
+        let zee2Sound = Bundle.main.path(forResource:"z2", ofType:"wav")
        
         do {
             zee2Player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath:zee2Sound!)as URL)

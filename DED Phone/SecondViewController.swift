@@ -36,7 +36,7 @@ class SecondViewController: UIViewController,AVAudioPlayerDelegate{
         callingNumber.text=incomingNumber
       
         let ringingSound = Bundle.main.path(forResource:"Ringing2", ofType:"wav")
-        let zeeSound = Bundle.main.path(forResource:"Fire", ofType:"wav")
+        let zeeSound = Bundle.main.path(forResource:"z1", ofType:"wav")
 
         do {
             ringingPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath:ringingSound!)as URL)

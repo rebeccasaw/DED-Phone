@@ -12,6 +12,8 @@
 		E11824ED22503C6C005C6367 /* RingRing.wav in Resources */ = {isa = PBXBuildFile; fileRef = E11824EC22503C6C005C6367 /* RingRing.wav */; };
 		E11824EF22503E26005C6367 /* AnsweredCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11824EE22503E26005C6367 /* AnsweredCallViewController.swift */; };
 		E11824F122504641005C6367 /* ChangeWaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11824F022504641005C6367 /* ChangeWaitViewController.swift */; };
+		E137BD3D2268EB220050016B /* z1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E137BD3C2268EB220050016B /* z1.wav */; };
+		E137BD3F2268EB2A0050016B /* z2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E137BD3E2268EB2A0050016B /* z2.wav */; };
 		E1BC740F224D1199007CEC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC740E224D1199007CEC48 /* AppDelegate.swift */; };
 		E1BC7411224D1199007CEC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC7410224D1199007CEC48 /* ViewController.swift */; };
 		E1BC7414224D1199007CEC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BC7412224D1199007CEC48 /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		E11824EC22503C6C005C6367 /* RingRing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = RingRing.wav; path = "../../../../Documents/DED Phone/RingRing.wav"; sourceTree = "<group>"; };
 		E11824EE22503E26005C6367 /* AnsweredCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweredCallViewController.swift; sourceTree = "<group>"; };
 		E11824F022504641005C6367 /* ChangeWaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeWaitViewController.swift; sourceTree = "<group>"; };
+		E137BD3C2268EB220050016B /* z1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = z1.wav; path = "../../../../Documents/DED Phone/z1.wav"; sourceTree = "<group>"; };
+		E137BD3E2268EB2A0050016B /* z2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = z2.wav; path = "../../../../Documents/DED Phone/z2.wav"; sourceTree = "<group>"; };
 		E1BC740B224D1199007CEC48 /* DED Phone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DED Phone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BC740E224D1199007CEC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BC7410224D1199007CEC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 		E1DB135A224EC43700F6E613 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				E137BD3C2268EB220050016B /* z1.wav */,
+				E137BD3E2268EB2A0050016B /* z2.wav */,
 				E1DB135B224EC43E00F6E613 /* Ringing.wav */,
 				E1DB135C224EC82400F6E613 /* Ringing2.wav */,
 				E1DB1360224F146F00F6E613 /* Fire.wav */,
@@ -263,11 +269,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E137BD3D2268EB220050016B /* z1.wav in Resources */,
 				E1DB135D224EC82400F6E613 /* Ringing2.wav in Resources */,
 				E1DB1361224F146F00F6E613 /* Fire.wav in Resources */,
 				E1BC7419224D119B007CEC48 /* LaunchScreen.storyboard in Resources */,
 				E1BC7416224D119B007CEC48 /* Assets.xcassets in Resources */,
 				E11824ED22503C6C005C6367 /* RingRing.wav in Resources */,
+				E137BD3F2268EB2A0050016B /* z2.wav in Resources */,
 				E1BC7414224D1199007CEC48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,7 +482,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = CH229FMVFV;
 				INFOPLIST_FILE = "DED Phone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -484,6 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "rebeccasaw.DED-Phone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "1 year certificate";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -493,7 +503,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = CH229FMVFV;
 				INFOPLIST_FILE = "DED Phone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -503,6 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "rebeccasaw.DED-Phone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "1 year certificate";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
